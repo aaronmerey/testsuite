@@ -66,7 +66,7 @@
 #include "ResumeLog.h"
 #include "TestOutputDriver.h"
 #include "StdOutputDriver.h"
-#include "JUnitOutputDriver.h"
+//#include "JUnitOutputDriver.h"
 #include "comptester.h"
 #include "CmdLine.h"
 #include "module.h"
@@ -940,10 +940,10 @@ int setupLogs(ParameterDict &params)
          setOutput(newoutput);
       }      
    }
-   if(params["junit"]->getInt())
-   {
-      setOutput(new JUnitOutputDriver(NULL));
-   }
+//   if(params["junit"]->getInt())
+//  {
+//      setOutput(new JUnitOutputDriver(NULL));
+//   }
 
    int unique_id = params["unique_id"]->getInt();
    if (unique_id) {
